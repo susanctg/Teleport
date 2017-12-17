@@ -45,7 +45,7 @@ public class KeyPiano{
         return position;
     }
 
-    public void move(int tileSpeed){
+    public void move(double tileSpeed){
         position.y += tileSpeed;
         if(position.y >= 1000){
             position.y = -250;
@@ -53,7 +53,9 @@ public class KeyPiano{
             int randX = random.nextInt(3);
             position.x = randX*200;
         }
+
     }
+
 }
 
 

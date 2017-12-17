@@ -7,7 +7,7 @@ public class World {
     Random randx = new Random();
     private KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4,keyPiano5;
     private TeleportGame teleportGame;
-    private int tileSpeed = 5;
+    private double tileSpeed = 5;
     private int score = 0;
     private int state = 1;
     World(TeleportGame teleportGame){
@@ -33,10 +33,10 @@ public class World {
         return score;
     }
     void increaseSpeed(){
-        tileSpeed += 1;
+        tileSpeed = score*2/30+5;
     }
 
-    public int getTileSpeed(){
+    public double getTileSpeed(){
         return tileSpeed;
     }
 

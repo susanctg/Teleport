@@ -143,6 +143,9 @@ public class GameScreen extends ScreenAdapter {
         if(Gdx.input.isKeyPressed(Input.Keys.ENTER)){
             world.changeState(2);
         }
+        if(world.getScore()%15==1){
+            world.increaseSpeed();
+        }
     }
     @Override
     public void render(float delta) {
