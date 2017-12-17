@@ -20,6 +20,11 @@ public class KeyPiano{
         touched = false;
 
     }
+
+    public Boolean getStatus() {
+        return !touched;
+    }
+
     public void touched(){
         touched = true;
     }
