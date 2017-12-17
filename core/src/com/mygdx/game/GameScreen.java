@@ -130,6 +130,15 @@ public class GameScreen extends ScreenAdapter {
                 }
                 keyPiano5.touched();
             }
+
+        }
+        int overMax = 1000-200;
+        if(((keyPiano1.getPosition().y>overMax)&(keyPiano1.getStatus()))|
+                ((keyPiano2.getPosition().y>overMax)&(keyPiano2.getStatus()))|
+                ((keyPiano3.getPosition().y>overMax)&(keyPiano3.getStatus()))|
+                ((keyPiano4.getPosition().y>overMax)&(keyPiano4.getStatus()))|
+                ((keyPiano5.getPosition().y>overMax)&(keyPiano5.getStatus()))){
+            world.changeState(3);
         }
         if(Gdx.input.isKeyPressed(Input.Keys.ENTER)){
             world.changeState(2);
