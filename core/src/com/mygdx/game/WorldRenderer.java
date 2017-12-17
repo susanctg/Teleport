@@ -12,7 +12,7 @@ public class WorldRenderer {
     private World world;
     private TeleportGame teleportGame;
     private KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4,keyPiano5;
-    private Texture stripeImg;
+    private Texture stripeImg,startImg;
     private Batch batch;
     private Vector2 pos1,pos2,pos3,pos4,pos5;
     private BitmapFont font;
@@ -37,6 +37,8 @@ public class WorldRenderer {
         pos5 = keyPiano5.getPosition();
 
         stripeImg = new Texture("g_stripe.jpg");
+        startImg = new Texture("start.jpg");
+
         font = new BitmapFont();
     }
 
@@ -44,6 +46,9 @@ public class WorldRenderer {
 
         SpriteBatch batch = teleportGame.batch;
         batch.begin();
+        if(world.getState() == 1){
+            batch.draw(startImg,0,0);
+        }
   /*
         int randStripe1 = randStripe.nextInt(4);
         int randStripe2 = randStripe.nextInt(4);
@@ -57,14 +62,19 @@ public class WorldRenderer {
         if(randStripe.nextInt(30) == 1){
             batch.draw(stripeImg,400,0);
         }
-*/
-        batch.draw(keyPiano1.getKeyImg(),pos1.x,pos1.y);
-        batch.draw(keyPiano2.getKeyImg(),pos2.x,pos2.y);
-        batch.draw(keyPiano3.getKeyImg(),pos3.x,pos3.y);
-        batch.draw(keyPiano4.getKeyImg(),pos4.x,pos4.y);
-        batch.draw(keyPiano5.getKeyImg(),pos5.x,pos5.y);
-        font.draw(batch, "" + world.getScore(),300, 50);
+*/      if(world.getState() == 2) {
+            batch.draw(keyPiano1.getKeyImg(), pos1.x, pos1.y);
+            batch.draw(keyPiano2.getKeyImg(), pos2.x, pos2.y);
+            batch.draw(keyPiano3.getKeyImg(), pos3.x, pos3.y);
+            batch.draw(keyPiano4.getKeyImg(), pos4.x, pos4.y);
+            batch.draw(keyPiano5.getKeyImg(), pos5.x, pos5.y);
+            font.draw(batch, "" + world.getScore(), 300, 50);
+        }
+        if(world.getState() == 3){
+
+        }
         batch.end();
+
 
     }
 }

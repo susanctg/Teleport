@@ -131,7 +131,9 @@ public class GameScreen extends ScreenAdapter {
                 keyPiano5.touched();
             }
         }
-
+        if(Gdx.input.isKeyPressed(Input.Keys.ENTER)){
+            world.changeState(2);
+        }
     }
     @Override
     public void render(float delta) {

@@ -9,6 +9,7 @@ public class World {
     private TeleportGame teleportGame;
     private int tileSpeed = 5;
     private int score = 0;
+    private int state = 1;
     World(TeleportGame teleportGame){
         this.teleportGame = teleportGame;
 
@@ -18,6 +19,12 @@ public class World {
         keyPiano4 = new KeyPiano(200*randx.nextInt(3),-1000);
         keyPiano5 = new KeyPiano(200*randx.nextInt(3),-1250);
 
+    }
+    public int getState(){
+        return state;
+    }
+    void changeState(int n){
+        state = n;
     }
     void increaseScore(){
         score += 1;
