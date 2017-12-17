@@ -149,6 +149,12 @@ public class GameScreen extends ScreenAdapter {
         if(world.getScore()%15==1){
             world.increaseSpeed();
         }
+        if(world.getState()==1|world.getState()==3){
+            world.stopAllTile();
+        }
+        if(world.getState()==2){
+            world.increaseSpeed();
+        }
     }
     @Override
     public void render(float delta) {

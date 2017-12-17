@@ -40,6 +40,10 @@ public class World {
         return tileSpeed;
     }
 
+    public void stopAllTile(){
+        tileSpeed = 0;
+    }
+
     KeyPiano getKeyPiano1() {
         return keyPiano1;
     }
@@ -55,7 +59,6 @@ public class World {
     KeyPiano getKeyPiano5() {
         return keyPiano5;
     }
-
 
 
 
