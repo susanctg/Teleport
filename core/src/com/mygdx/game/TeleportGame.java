@@ -8,7 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class TeleportGame extends Game {
     public SpriteBatch batch;
- 
+
     @Override
     public void create () {
         batch = new SpriteBatch();
