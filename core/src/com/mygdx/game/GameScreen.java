@@ -39,67 +39,67 @@ public class GameScreen extends ScreenAdapter {
         if(Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             if((keyPiano1.getPosition().y >= minScoreLine& keyPiano1.getPosition().y<maxScoreLine) & keyPiano1.getPosition().x==0){
                 world.increaseScore();
-                keyPiano1.setInitPosition();
+                keyPiano1.touched();
             }
             if((keyPiano2.getPosition().y >= minScoreLine& keyPiano2.getPosition().y<maxScoreLine) & keyPiano2.getPosition().x==0){
                 world.increaseScore();
-                keyPiano2.setInitPosition();
+                keyPiano2.touched();
             }
             if((keyPiano3.getPosition().y >= minScoreLine& keyPiano3.getPosition().y<maxScoreLine) & keyPiano3.getPosition().x==0){
                 world.increaseScore();
-                keyPiano3.setInitPosition();
+                keyPiano3.touched();
             }
             if((keyPiano4.getPosition().y >= minScoreLine& keyPiano4.getPosition().y<maxScoreLine) & keyPiano4.getPosition().x==0){
                 world.increaseScore();
-                keyPiano4.setInitPosition();
+                keyPiano4.touched();
             }
             if((keyPiano5.getPosition().y >= minScoreLine& keyPiano5.getPosition().y<maxScoreLine) & keyPiano5.getPosition().x==0){
                 world.increaseScore();
-                keyPiano5.setInitPosition();
+                keyPiano5.touched();
             }
         }
         if(Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
             if((keyPiano1.getPosition().y >= minScoreLine& keyPiano1.getPosition().y<maxScoreLine) & keyPiano1.getPosition().x==200){
                 world.increaseScore();
-                keyPiano1.setInitPosition();
+                keyPiano1.touched();
             }
             if((keyPiano2.getPosition().y >= minScoreLine& keyPiano2.getPosition().y<maxScoreLine) & keyPiano2.getPosition().x==200){
                 world.increaseScore();
-                keyPiano2.setInitPosition();
+                keyPiano2.touched();
             }
             if((keyPiano3.getPosition().y >= minScoreLine& keyPiano3.getPosition().y<maxScoreLine) & keyPiano3.getPosition().x==200){
                 world.increaseScore();
-                keyPiano3.setInitPosition();
+                keyPiano3.touched();
             }
             if((keyPiano4.getPosition().y >= minScoreLine& keyPiano4.getPosition().y<maxScoreLine) & keyPiano4.getPosition().x==200){
                 world.increaseScore();
-                keyPiano4.setInitPosition();
+                keyPiano4.touched();
             }
             if((keyPiano5.getPosition().y >= minScoreLine& keyPiano5.getPosition().y<maxScoreLine) & keyPiano5.getPosition().x==200){
                 world.increaseScore();
-                keyPiano5.setInitPosition();
+                keyPiano5.touched();
             }
         }
         if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             if((keyPiano1.getPosition().y >= minScoreLine& keyPiano1.getPosition().y<maxScoreLine) & keyPiano1.getPosition().x==400){
                 world.increaseScore();
-                keyPiano1.setInitPosition();
+                keyPiano1.touched();
             }
             if((keyPiano2.getPosition().y >= minScoreLine& keyPiano2.getPosition().y<maxScoreLine) & keyPiano2.getPosition().x==400){
                 world.increaseScore();
-                keyPiano2.setInitPosition();
+                keyPiano2.touched();
             }
             if((keyPiano3.getPosition().y >= minScoreLine& keyPiano3.getPosition().y<maxScoreLine) & keyPiano3.getPosition().x==400){
                 world.increaseScore();
-                keyPiano3.setInitPosition();
+                keyPiano3.touched();
             }
             if((keyPiano4.getPosition().y >= minScoreLine& keyPiano4.getPosition().y<maxScoreLine) & keyPiano4.getPosition().x==400){
                 world.increaseScore();
-                keyPiano4.setInitPosition();
+                keyPiano4.touched();
             }
             if((keyPiano5.getPosition().y >= minScoreLine& keyPiano5.getPosition().y<maxScoreLine) & keyPiano5.getPosition().x==400){
                 world.increaseScore();
-                keyPiano5.setInitPosition();
+                keyPiano5.touched();
             }
         }
 
