@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -10,6 +11,8 @@ import com.badlogic.gdx.math.Vector2;
 public class GameScreen extends ScreenAdapter {
     private TeleportGame teleportGame;
     private Texture keyImg;
+    private int minScoreLine = 750-125;
+    private int maxScoreLine = 1000-125;
     //Vector2 pos;
     World world;
     WorldRenderer worldRenderer;
@@ -23,15 +26,83 @@ public class GameScreen extends ScreenAdapter {
         keyPiano4 = world.getKeyPiano4();
         keyPiano5 = world.getKeyPiano5();
         worldRenderer = new WorldRenderer(teleportGame , world);
-        keyImg = new Texture("key.jpg");
+        keyImg = new Texture("key.png");
+
 
     }
     private void update(float delta) {
-        keyPiano1.move();
-        keyPiano2.move();
-        keyPiano3.move();
-        keyPiano4.move();
-        keyPiano5.move();
+        keyPiano1.move(world.getTileSpeed());
+        keyPiano2.move(world.getTileSpeed());
+        keyPiano3.move(world.getTileSpeed());
+        keyPiano4.move(world.getTileSpeed());
+        keyPiano5.move(world.getTileSpeed());
+        if(Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+            if((keyPiano1.getPosition().y >= minScoreLine& keyPiano1.getPosition().y<maxScoreLine) & keyPiano1.getPosition().x==0){
+                world.increaseScore();
+                keyPiano1.setInitPosition();
+            }
+            if((keyPiano2.getPosition().y >= minScoreLine& keyPiano2.getPosition().y<maxScoreLine) & keyPiano2.getPosition().x==0){
+                world.increaseScore();
+                keyPiano2.setInitPosition();
+            }
+            if((keyPiano3.getPosition().y >= minScoreLine& keyPiano3.getPosition().y<maxScoreLine) & keyPiano3.getPosition().x==0){
+                world.increaseScore();
+                keyPiano3.setInitPosition();
+            }
+            if((keyPiano4.getPosition().y >= minScoreLine& keyPiano4.getPosition().y<maxScoreLine) & keyPiano4.getPosition().x==0){
+                world.increaseScore();
+                keyPiano4.setInitPosition();
+            }
+            if((keyPiano5.getPosition().y >= minScoreLine& keyPiano5.getPosition().y<maxScoreLine) & keyPiano5.getPosition().x==0){
+                world.increaseScore();
+                keyPiano5.setInitPosition();
+            }
+        }
+        if(Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            if((keyPiano1.getPosition().y >= minScoreLine& keyPiano1.getPosition().y<maxScoreLine) & keyPiano1.getPosition().x==200){
+                world.increaseScore();
+                keyPiano1.setInitPosition();
+            }
+            if((keyPiano2.getPosition().y >= minScoreLine& keyPiano2.getPosition().y<maxScoreLine) & keyPiano2.getPosition().x==200){
+                world.increaseScore();
+                keyPiano2.setInitPosition();
+            }
+            if((keyPiano3.getPosition().y >= minScoreLine& keyPiano3.getPosition().y<maxScoreLine) & keyPiano3.getPosition().x==200){
+                world.increaseScore();
+                keyPiano3.setInitPosition();
+            }
+            if((keyPiano4.getPosition().y >= minScoreLine& keyPiano4.getPosition().y<maxScoreLine) & keyPiano4.getPosition().x==200){
+                world.increaseScore();
+                keyPiano4.setInitPosition();
+            }
+            if((keyPiano5.getPosition().y >= minScoreLine& keyPiano5.getPosition().y<maxScoreLine) & keyPiano5.getPosition().x==200){
+                world.increaseScore();
+                keyPiano5.setInitPosition();
+            }
+        }
+        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+            if((keyPiano1.getPosition().y >= minScoreLine& keyPiano1.getPosition().y<maxScoreLine) & keyPiano1.getPosition().x==400){
+                world.increaseScore();
+                keyPiano1.setInitPosition();
+            }
+            if((keyPiano2.getPosition().y >= minScoreLine& keyPiano2.getPosition().y<maxScoreLine) & keyPiano2.getPosition().x==400){
+                world.increaseScore();
+                keyPiano2.setInitPosition();
+            }
+            if((keyPiano3.getPosition().y >= minScoreLine& keyPiano3.getPosition().y<maxScoreLine) & keyPiano3.getPosition().x==400){
+                world.increaseScore();
+                keyPiano3.setInitPosition();
+            }
+            if((keyPiano4.getPosition().y >= minScoreLine& keyPiano4.getPosition().y<maxScoreLine) & keyPiano4.getPosition().x==400){
+                world.increaseScore();
+                keyPiano4.setInitPosition();
+            }
+            if((keyPiano5.getPosition().y >= minScoreLine& keyPiano5.getPosition().y<maxScoreLine) & keyPiano5.getPosition().x==400){
+                world.increaseScore();
+                keyPiano5.setInitPosition();
+            }
+        }
+
     }
     @Override
     public void render(float delta) {

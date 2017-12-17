@@ -7,6 +7,8 @@ public class World {
     Random randx = new Random();
     private KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4,keyPiano5;
     private TeleportGame teleportGame;
+    private int tileSpeed = 5;
+    private int score = 0;
     World(TeleportGame teleportGame){
         this.teleportGame = teleportGame;
 
@@ -16,6 +18,19 @@ public class World {
         keyPiano4 = new KeyPiano(200*randx.nextInt(3),-1000);
         keyPiano5 = new KeyPiano(200*randx.nextInt(3),-1250);
 
+    }
+    void increaseScore(){
+        score += 1;
+    }
+    public int getScore(){
+        return score;
+    }
+    void increaseSpeed(){
+        tileSpeed += 1;
+    }
+
+    public int getTileSpeed(){
+        return tileSpeed;
     }
 
     KeyPiano getKeyPiano1() {
@@ -33,6 +48,8 @@ public class World {
     KeyPiano getKeyPiano5() {
         return keyPiano5;
     }
+
+
 
 
 }
