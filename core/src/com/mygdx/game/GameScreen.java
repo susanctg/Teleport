@@ -42,29 +42,32 @@ public class GameScreen extends ScreenAdapter {
                 }
                 keyPiano1.touched();
             }
-            if((keyPiano2.getPosition().y >= minScoreLine& keyPiano2.getPosition().y<maxScoreLine) & keyPiano2.getPosition().x==0){
+            else if((keyPiano2.getPosition().y >= minScoreLine& keyPiano2.getPosition().y<maxScoreLine) & keyPiano2.getPosition().x==0){
                 if(keyPiano2.getStatus()){
                     world.increaseScore();
                 }
                 keyPiano2.touched();
             }
-            if((keyPiano3.getPosition().y >= minScoreLine& keyPiano3.getPosition().y<maxScoreLine) & keyPiano3.getPosition().x==0){
+            else if((keyPiano3.getPosition().y >= minScoreLine& keyPiano3.getPosition().y<maxScoreLine) & keyPiano3.getPosition().x==0){
                 if(keyPiano3.getStatus()){
                     world.increaseScore();
                 }
                 keyPiano3.touched();
             }
-            if((keyPiano4.getPosition().y >= minScoreLine& keyPiano4.getPosition().y<maxScoreLine) & keyPiano4.getPosition().x==0){
+            else if((keyPiano4.getPosition().y >= minScoreLine& keyPiano4.getPosition().y<maxScoreLine) & keyPiano4.getPosition().x==0){
                 if(keyPiano4.getStatus()){
                     world.increaseScore();
                 }
                 keyPiano4.touched();
             }
-            if((keyPiano5.getPosition().y >= minScoreLine& keyPiano5.getPosition().y<maxScoreLine) & keyPiano5.getPosition().x==0){
+            else if((keyPiano5.getPosition().y >= minScoreLine& keyPiano5.getPosition().y<maxScoreLine) & keyPiano5.getPosition().x==0){
                 if(keyPiano5.getStatus()){
                     world.increaseScore();
                 }
                 keyPiano5.touched();
+            }
+            else{
+                world.changeState(3);
             }
         }
         if(Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
