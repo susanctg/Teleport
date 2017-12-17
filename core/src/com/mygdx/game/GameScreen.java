@@ -10,7 +10,7 @@ import com.badlogic.gdx.math.Vector2;
 
 public class GameScreen extends ScreenAdapter {
     private TeleportGame teleportGame;
-    private Texture keyImg;
+
     private int minScoreLine = 750-125;
     private int maxScoreLine = 1000-125;
     //Vector2 pos;
@@ -26,7 +26,6 @@ public class GameScreen extends ScreenAdapter {
         keyPiano4 = world.getKeyPiano4();
         keyPiano5 = world.getKeyPiano5();
         worldRenderer = new WorldRenderer(teleportGame , world);
-        keyImg = new Texture("key.png");
 
 
     }

@@ -12,7 +12,7 @@ public class WorldRenderer {
     private World world;
     private TeleportGame teleportGame;
     private KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4,keyPiano5;
-    private Texture stripeImg,scoreLine;
+    private Texture stripeImg;
     private Batch batch;
     private Vector2 pos1,pos2,pos3,pos4,pos5;
     private BitmapFont font;
@@ -37,7 +37,6 @@ public class WorldRenderer {
         pos5 = keyPiano5.getPosition();
 
         stripeImg = new Texture("g_stripe.jpg");
-        scoreLine = new Texture("scoreline.jpg");
         font = new BitmapFont();
     }
 
@@ -45,7 +44,7 @@ public class WorldRenderer {
 
         SpriteBatch batch = teleportGame.batch;
         batch.begin();
-/*
+  /*
         int randStripe1 = randStripe.nextInt(4);
         int randStripe2 = randStripe.nextInt(4);
         int randStripe3 = randStripe.nextInt(4);
@@ -59,7 +58,6 @@ public class WorldRenderer {
             batch.draw(stripeImg,400,0);
         }
 */
-        batch.draw(scoreLine,0,875);
         batch.draw(keyPiano1.getKeyImg(),pos1.x,pos1.y);
         batch.draw(keyPiano2.getKeyImg(),pos2.x,pos2.y);
         batch.draw(keyPiano3.getKeyImg(),pos3.x,pos3.y);
