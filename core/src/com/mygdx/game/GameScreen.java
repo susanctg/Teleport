@@ -13,7 +13,7 @@ public class GameScreen extends ScreenAdapter {
     //Vector2 pos;
     World world;
     WorldRenderer worldRenderer;
-    KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4;
+    KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4,keyPiano5;
     public GameScreen(TeleportGame teleportGame) {
         this.teleportGame = teleportGame;
         world = new World(teleportGame);
@@ -21,6 +21,7 @@ public class GameScreen extends ScreenAdapter {
         keyPiano2 = world.getKeyPiano2();
         keyPiano3 = world.getKeyPiano3();
         keyPiano4 = world.getKeyPiano4();
+        keyPiano5 = world.getKeyPiano5();
         worldRenderer = new WorldRenderer(teleportGame , world);
         keyImg = new Texture("key.jpg");
 
@@ -30,7 +31,7 @@ public class GameScreen extends ScreenAdapter {
         keyPiano2.move();
         keyPiano3.move();
         keyPiano4.move();
-
+        keyPiano5.move();
     }
     @Override
     public void render(float delta) {

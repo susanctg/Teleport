@@ -1,15 +1,20 @@
 package com.mygdx.game;
 
 
+import java.util.Random;
+
 public class World {
-    private KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4;
+    Random randx = new Random();
+    private KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4,keyPiano5;
     private TeleportGame teleportGame;
     World(TeleportGame teleportGame){
         this.teleportGame = teleportGame;
-        keyPiano1 = new KeyPiano(0,-250);
-        keyPiano2 = new KeyPiano(200,-500);
-        keyPiano3 = new KeyPiano(400,-750);
-        keyPiano4 = new KeyPiano(0,-1000);
+
+        keyPiano1 = new KeyPiano(200*randx.nextInt(3),-250);
+        keyPiano2 = new KeyPiano(200*randx.nextInt(3),-500);
+        keyPiano3 = new KeyPiano(200*randx.nextInt(3),-750);
+        keyPiano4 = new KeyPiano(200*randx.nextInt(3),-1000);
+        keyPiano5 = new KeyPiano(200*randx.nextInt(3),-1250);
 
     }
 
@@ -24,6 +29,9 @@ public class World {
     }
     KeyPiano getKeyPiano4() {
         return keyPiano4;
+    }
+    KeyPiano getKeyPiano5() {
+        return keyPiano5;
     }
 
 

@@ -8,10 +8,10 @@ import com.badlogic.gdx.math.Vector2;
 public class WorldRenderer {
     private World world;
     private TeleportGame teleportGame;
-    private KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4;
+    private KeyPiano keyPiano1,keyPiano2,keyPiano3,keyPiano4,keyPiano5;
     private Texture keyImg;
     private Batch batch;
-    private Vector2 pos1,pos2,pos3,pos4;
+    private Vector2 pos1,pos2,pos3,pos4,pos5;
     public WorldRenderer(TeleportGame teleportGame, World world) {
         this.teleportGame = teleportGame;
         batch = teleportGame.batch;
@@ -21,11 +21,13 @@ public class WorldRenderer {
         keyPiano2 = world.getKeyPiano2();
         keyPiano3 = world.getKeyPiano3();
         keyPiano4 = world.getKeyPiano4();
+        keyPiano5 = world.getKeyPiano5();
 
         pos1 = keyPiano1.getPosition();
         pos2 = keyPiano2.getPosition();
         pos3 = keyPiano3.getPosition();
         pos4 = keyPiano4.getPosition();
+        pos5 = keyPiano5.getPosition();
         keyImg = new Texture("key.jpg");
 
     }
@@ -39,6 +41,7 @@ public class WorldRenderer {
         batch.draw(keyImg,pos2.x,pos2.y);
         batch.draw(keyImg,pos3.x,pos3.y);
         batch.draw(keyImg,pos4.x,pos4.y);
+        batch.draw(keyImg,pos5.x,pos5.y);
 
         batch.end();
 
