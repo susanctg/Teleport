@@ -13,6 +13,7 @@ public class GameScreen extends ScreenAdapter {
 
     private int minScoreLine = 750-125;
     private int maxScoreLine = 1000-125;
+    private int count=0;
     //Vector2 pos;
     World world;
     WorldRenderer worldRenderer;
@@ -143,8 +144,9 @@ public class GameScreen extends ScreenAdapter {
                 ((keyPiano5.getPosition().y>overMax)&(keyPiano5.getStatus()))){
             world.changeState(3);
         }
-        if(Gdx.input.isKeyPressed(Input.Keys.ENTER)){
+        if(Gdx.input.isKeyPressed(Input.Keys.ENTER)& count==0){
             world.changeState(2);
+            count+=1;
         }
         if(world.getScore()%15==1){
             world.increaseSpeed();
